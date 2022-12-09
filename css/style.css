@@ -60,7 +60,7 @@ section .heading h2{
     background-color: #ff6700 !important;
 }
 .navbar-toggler{
-    color: #fff !important;
+    color: #ff6700 !important;
     border-style: none;
 }
 
@@ -237,7 +237,7 @@ section .heading h2{
     border-radius: 10px;
     border: 2px solid #ccc;
     margin-bottom: 20px;
-
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.23);
 }
 .education-block h5{
     color: #888;
@@ -280,6 +280,57 @@ section .heading h2{
 }
 #portfolio .col-md-4{
     margin-bottom: 20px;
+}
+
+.box{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(0deg,
+    transparent, #ff6700, #ff6700);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(0deg,
+    transparent, #ff6700, #ff6700);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.forme{
+    position: absolute;
+    inset: 4px;
+    border-radius: 8px;
+    background: #28292d!important;
+    z-index: 10;
 }
 
 
@@ -333,3 +384,6 @@ footer h5{
     color: #fff;
     font-weight: normal;
 }
+
+
+
