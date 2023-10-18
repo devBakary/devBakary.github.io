@@ -51,9 +51,17 @@ section .heading h2{
     text-transform: uppercase;
     font-weight: bold;
 }
+.navbar img {
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+}
 .nav-pills .nav-link{
     color: black !important;
     text-align: center;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s *  var(--i));
+    opacity: 0; 
 }
 .nav-pills .nav-link.active,  .nav-pills .nav-link:hover{
     color: #fff !important;
@@ -120,6 +128,8 @@ section .heading h2{
 #skills .progress-bar{
     background: #6aad3d;
     border-radius: 5px;
+    animation: skill 1s ease forwards;
+    opacity: 0;
 }
 #skills .progress h5{
     margin-top: 5px;
@@ -130,6 +140,8 @@ section .heading h2{
 /* EXPERIENCE */
 #experience{
     background: #333;
+    animation: expPage 1s ease forwards;
+    opacity: 0;
 }
 #experience .heading h2{
     color: #fff;
@@ -151,6 +163,9 @@ section .heading h2{
 .timeline > li{
     margin-bottom: 20px;
     position: relative;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.8s *  var(--i));
+    opacity: 0; 
 }
 .timeline > li:after{
     clear: both;
@@ -239,6 +254,14 @@ section .heading h2{
     margin-bottom: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.23);
 }
+.part1{
+    animation: recom 2s ease forwards;
+    opacity: 0;  
+}
+.part2{
+    animation: part2 3s ease forwards;
+    opacity: 0;  
+}
 .education-block h5{
     color: #888;
     font-size: 15px;
@@ -260,10 +283,23 @@ section .heading h2{
     margin-bottom: 20px;
 }
 
+/* REALISATION */
+#realisation .card{
+    animation: realisations 1s ease forwards;
+    animation-delay: calc(0.8s *  var(--i));
+    opacity: 0;
+}
+#realisation .mobile{
+    position: relative;
+    top: -60%;
+}
+
 
 /* PORTFOLIO */
 #portfolio{
     background: #333;
+    animation: expPage 1s ease forwards;
+    opacity: 0;
 }
 #portfolio .heading h2{
     color: #fff;
@@ -337,6 +373,9 @@ section .heading h2{
 /* RECOMMANDATIONS */
 #recommandations{
     background: #fff;
+    animation: recom 3s ease forwards;
+    opacity: 0;
+    animation-delay: 2s;
 }
 #recommandations .heading h2{
     color: #ff6700;
@@ -385,5 +424,100 @@ footer h5{
     font-weight: normal;
 }
 
+#realisation .card{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+.ico i{
+    font-size: 30px;
+}
+.ico i:hover{
+    color: #ff6700;
+}
+.ico a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1c1c1c;
+}
+.ico a:hover{
+    text-decoration: none;
+    color: #ff6700;
+}
+
+.modal-header{
+    background-color: #1c1c1c;
+    color: #fff;
+}
 
 
+/* ==================  Animation */
+@keyframes slideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes skill{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes expPage{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes realisations{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes recom{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes part2{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
